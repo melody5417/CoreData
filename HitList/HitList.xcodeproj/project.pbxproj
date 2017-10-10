@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F67BD321F8C793000D4AA1D /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67BD311F8C793000D4AA1D /* HistoryService.swift */; };
+		4F67BD361F8C7AFB00D4AA1D /* HitList.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 4F67BD331F8C7AFA00D4AA1D /* HitList.sqlite-shm */; };
+		4F67BD371F8C7AFB00D4AA1D /* HitList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4F67BD341F8C7AFA00D4AA1D /* HitList.sqlite */; };
+		4F67BD381F8C7AFB00D4AA1D /* HitList.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 4F67BD351F8C7AFA00D4AA1D /* HitList.sqlite-wal */; };
 		4FDD25761F8DC107005A20B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDD25751F8DC107005A20B1 /* AppDelegate.swift */; };
 		4FDD25781F8DC107005A20B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDD25771F8DC107005A20B1 /* ViewController.swift */; };
 		4FDD257B1F8DC107005A20B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDD25791F8DC107005A20B1 /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F67BD311F8C793000D4AA1D /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
+		4F67BD331F8C7AFA00D4AA1D /* HitList.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HitList.sqlite-shm"; sourceTree = "<group>"; };
+		4F67BD341F8C7AFA00D4AA1D /* HitList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = HitList.sqlite; sourceTree = "<group>"; };
+		4F67BD351F8C7AFA00D4AA1D /* HitList.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HitList.sqlite-wal"; sourceTree = "<group>"; };
 		4FDD25721F8DC107005A20B1 /* HitList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDD25751F8DC107005A20B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FDD25771F8DC107005A20B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +64,10 @@
 		4FDD25741F8DC107005A20B1 /* HitList */ = {
 			isa = PBXGroup;
 			children = (
+				4F67BD341F8C7AFA00D4AA1D /* HitList.sqlite */,
+				4F67BD331F8C7AFA00D4AA1D /* HitList.sqlite-shm */,
+				4F67BD351F8C7AFA00D4AA1D /* HitList.sqlite-wal */,
+				4F67BD311F8C793000D4AA1D /* HistoryService.swift */,
 				4FDD25751F8DC107005A20B1 /* AppDelegate.swift */,
 				4FDD25771F8DC107005A20B1 /* ViewController.swift */,
 				4FDD25791F8DC107005A20B1 /* Main.storyboard */,
@@ -126,7 +138,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F67BD381F8C7AFB00D4AA1D /* HitList.sqlite-wal in Resources */,
+				4F67BD361F8C7AFB00D4AA1D /* HitList.sqlite-shm in Resources */,
 				4FDD25831F8DC107005A20B1 /* LaunchScreen.storyboard in Resources */,
+				4F67BD371F8C7AFB00D4AA1D /* HitList.sqlite in Resources */,
 				4FDD25801F8DC107005A20B1 /* Assets.xcassets in Resources */,
 				4FDD257B1F8DC107005A20B1 /* Main.storyboard in Resources */,
 			);
@@ -141,6 +156,7 @@
 			files = (
 				4FDD257E1F8DC107005A20B1 /* HitList.xcdatamodeld in Sources */,
 				4FDD25781F8DC107005A20B1 /* ViewController.swift in Sources */,
+				4F67BD321F8C793000D4AA1D /* HistoryService.swift in Sources */,
 				4FDD25761F8DC107005A20B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

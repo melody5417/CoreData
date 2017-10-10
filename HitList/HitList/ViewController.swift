@@ -16,14 +16,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         title = "The List"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        fetchDataSource()
+    }
 
+    func fetchDataSource() {
         //1
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -43,6 +45,26 @@ class ViewController: UIViewController {
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+    }
+
+    @IBAction func importHistory(_ sender: UIBarButtonItem) {
+        let result = HistoryService().createHistoryData()
+        if result == true {
+            showImportFinishedAlertView()
+        }
+    }
+
+    func showImportFinishedAlertView() {
+        let message = "Import history data has finished"
+        let alertController = UIAlertController(title: "Import Finished", message: message, preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "OK", style: .default) { [weak self](action: UIAlertAction) in
+            print("UIAlertController action :", action.title ?? "cancel")
+            self?.fetchDataSource()
+            self?.tableView.reloadData()
+        }
+        alertController.addAction(dismissAction)
+
+        present(alertController, animated: true)
     }
 
     @IBAction func addName(_ sender: UIBarButtonItem) {
@@ -81,11 +103,9 @@ class ViewController: UIViewController {
                 return
         }
 
-        // 1
         let managedContext =
             appDelegate.persistentContainer.viewContext
 
-        // 2
         let entity =
             NSEntityDescription.entity(forEntityName: "Person",
                                        in: managedContext)!
@@ -93,10 +113,8 @@ class ViewController: UIViewController {
         let person = NSManagedObject(entity: entity,
                                      insertInto: managedContext)
 
-        // 3
         person.setValue(name, forKeyPath: "name")
 
-        // 4
         do {
             try managedContext.save()
             people.append(person)

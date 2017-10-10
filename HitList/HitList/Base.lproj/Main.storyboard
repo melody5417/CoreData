@@ -35,6 +35,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="EFk-5Y-quk">
+                        <barButtonItem key="leftBarButtonItem" title="import" id="2UJ-6U-4VG">
+                            <connections>
+                                <action selector="importHistory:" destination="BYZ-38-t0r" id="8Lj-I9-uyX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" id="LyN-CN-pSw">
                             <connections>
                                 <action selector="addName:" destination="BYZ-38-t0r" id="vj4-dG-kL2"/>
